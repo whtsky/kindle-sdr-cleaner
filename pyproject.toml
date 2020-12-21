@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "kindle-sdr-cleaner"
+version = "0.1.0"
+description = "Clean useless .sdr folders in your Kindle."
+authors = ["Wu Haotian <whtsky@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+repository = "https://github.com/whtsky/kindle-sdr-cleaner"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+mypy = "^0.790"
+
+[tool.poetry.scripts]
+kindle-sdr-cleaner = "kindle_sdr_cleaner:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
