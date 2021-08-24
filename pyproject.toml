@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "kindle-sdr-cleaner"
-version = "0.1.0"
+version = "0.1.1"
 description = "Clean useless .sdr folders in your Kindle."
 authors = ["Wu Haotian <whtsky@gmail.com>"]
 license = "MIT"
