@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: "3.9"
           architecture: "x64"
-      - uses: snok/install-poetry@v1.2.0
+      - uses: snok/install-poetry@v1.2.1
       - run: poetry install
       - run: poetry run black --check .
       - run: poetry run mypy ./kindle_sdr_cleaner.py
