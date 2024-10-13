@@ -19,5 +19,5 @@ mypy = "^0.790"
 kindle-sdr-cleaner = "kindle_sdr_cleaner:main"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.9.1"]
 build-backend = "poetry.core.masonry.api"
