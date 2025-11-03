@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: actions/setup-python@v2
         with:
-          python-version: "3.9"
+          python-version: "3.9.25"
           architecture: "x64"
       - uses: snok/install-poetry@v1.2.1
       - run: poetry install
