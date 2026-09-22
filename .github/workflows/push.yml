@@ -14,7 +14,7 @@ jobs:
           architecture: "x64"
       - uses: snok/install-poetry@v1.4.2
         with:
-          version: "1.8.5"
+          version: "2.3.4"
       - run: poetry install
       - run: poetry run black --check .
       - run: poetry run mypy ./kindle_sdr_cleaner.py
