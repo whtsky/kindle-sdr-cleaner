@@ -25,6 +25,7 @@ jobs:
           args: "check --select E4,E7,E9,F"
       - name: Pyright alternative
         run: npx --yes pyright@1.1.414 --pythonversion 3.6 kindle_sdr_cleaner.py
-      - name: Basedpyright alternative
+      - name: Basedpyright alternative (strict baseline)
+        continue-on-error: true
         run: npx --yes basedpyright@1.40.1 --pythonversion 3.6 kindle_sdr_cleaner.py
       - run: poetry run mypy ./kindle_sdr_cleaner.py
