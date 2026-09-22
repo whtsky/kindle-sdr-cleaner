@@ -7,12 +7,14 @@ jobs:
     name: codestyle
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.9"
           architecture: "x64"
-      - uses: snok/install-poetry@v1.2.1
+      - uses: snok/install-poetry@v1.4.2
+        with:
+          version: "1.8.5"
       - run: poetry install
       - run: poetry run black --check .
       - run: poetry run mypy ./kindle_sdr_cleaner.py
