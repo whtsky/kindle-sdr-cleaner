@@ -15,6 +15,12 @@ jobs:
       - uses: snok/install-poetry@v1.4.2
         with:
           version: "1.8.5"
+      - run: poetry lock --no-update
       - run: poetry install
-      - run: poetry run black --check .
+      - uses: astral-sh/ruff-action@v4.1.0
+        with:
+          args: "format --check --diff"
+      - uses: astral-sh/ruff-action@v4.1.0
+        with:
+          args: "check"
       - run: poetry run mypy ./kindle_sdr_cleaner.py
