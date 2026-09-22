@@ -22,5 +22,9 @@ jobs:
           args: "format --check --diff"
       - uses: astral-sh/ruff-action@v4.1.0
         with:
-          args: "check"
+          args: "check --select E4,E7,E9,F"
+      - name: Pyright alternative
+        run: npx --yes pyright@1.1.414 --pythonversion 3.6 kindle_sdr_cleaner.py
+      - name: Basedpyright alternative
+        run: npx --yes basedpyright@1.40.1 --pythonversion 3.6 kindle_sdr_cleaner.py
       - run: poetry run mypy ./kindle_sdr_cleaner.py
