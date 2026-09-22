@@ -5,12 +5,12 @@ name: check
 jobs:
   check:
     name: codestyle
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
-          python-version: "3.9"
+          python-version: "3.8"
           architecture: "x64"
       - uses: snok/install-poetry@v1.4.2
         with:
