@@ -14,6 +14,9 @@ python = "^3.6"
 [tool.poetry.dev-dependencies]
 mypy = "^0.790"
 
+[tool.basedpyright]
+typeCheckingMode = "basic"
+
 [tool.poetry.scripts]
 kindle-sdr-cleaner = "kindle_sdr_cleaner:main"
 
