@@ -1,4 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>whtsky/renovate-config"]
+  "extends": ["github>whtsky/renovate-config"],
+  "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["python"],
+      "matchFileNames": [".github/workflows/push.yml"],
+      "enabled": false
+    }
+  ]
 }
